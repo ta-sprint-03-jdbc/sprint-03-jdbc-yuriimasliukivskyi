@@ -10,9 +10,9 @@ import java.util.Properties;
 public class DBUtil {
     public static Connection getConnection() throws SQLException {
         // Check if we're running in GitHub Actions
-        String dbName = System.getenv("POSTGRES_DB");
-        String dbUser = System.getenv("POSTGRES_USER");
-        String dbPassword = System.getenv("POSTGRES_PASSWORD");
+        String dbName = System.getenv("postgres");
+        String dbUser = System.getenv("postgres");
+        String dbPassword = System.getenv("225588");
 
         try {
             if (dbName != null && dbUser != null && dbPassword != null) {
